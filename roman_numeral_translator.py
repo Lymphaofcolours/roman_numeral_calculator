@@ -43,39 +43,39 @@ if __name__ == '__main__':
         '''
         listnum: list = []
         listcount: list = []
-        def nine_decomp() -> tuple:
+        def nine_decomp() -> list:
             '''
-            :return: str, int
+            :return: list(str), list(int), list(str), list(int)
             '''
             listnum.append(str(1))
             listcount.append(count*10)
             listnum.append(str(1))
             listcount.append(count)
-        def five_plus_decomp() -> tuple:
+        def five_plus_decomp() -> list:
             '''
-            :return: str, int
+            :return: list(str), list(int), list(str), list(int)
             '''
             listnum.append(str(int(i) - 5))
             listcount.append(count)
             listnum.append(str(5))
             listcount.append(count)
-        def five_decomp() -> tuple:
+        def five_decomp() -> list:
             '''
-            :return: str, int
+            :return: list(str), list(int)
             '''
             listnum.append(str(5))
             listcount.append(count)
-        def four_decomp() -> tuple:
+        def four_decomp() -> list:
             '''
-            :return: str, int
+            :return: list(str), list(int), list(str), list(int)
             '''
             listnum.append(str(5))
             listcount.append(count)
             listnum.append(str(1))
             listcount.append(count)
-        def four_less_decomp() -> tuple:
+        def four_less_decomp() -> list:
             '''
-            :return: str, int
+            :return: list(str), list(int)
             '''
             listnum.append(i)
             listcount.append(count)
