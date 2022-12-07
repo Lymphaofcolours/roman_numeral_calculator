@@ -32,7 +32,7 @@ if __name__ == '__main__':
                             '50000': str(u'L\u0304'),
                             '100000': str(u'C\u0304'),
                             '500000': str(u'D\u0304'),
-                            '1000000': str(u'M\u0304'),
+                            '1000000': str(u'M\u0304')
                             }
 
     def num_decomp(count: int = 1) -> list:
@@ -45,7 +45,7 @@ if __name__ == '__main__':
         listcount: list = []
         def nine_decomp() -> tuple:
             '''
-            :return: tuple
+            :return: str, int
             '''
             listnum.append(str(1))
             listcount.append(count*10)
@@ -53,7 +53,7 @@ if __name__ == '__main__':
             listcount.append(count)
         def five_plus_decomp() -> tuple:
             '''
-            :return: tuple
+            :return: str, int
             '''
             listnum.append(str(int(i) - 5))
             listcount.append(count)
@@ -61,13 +61,13 @@ if __name__ == '__main__':
             listcount.append(count)
         def five_decomp() -> tuple:
             '''
-            :return: tuple
+            :return: str, int
             '''
             listnum.append(str(5))
             listcount.append(count)
         def four_decomp() -> tuple:
             '''
-            :return: tuple
+            :return: str, int
             '''
             listnum.append(str(5))
             listcount.append(count)
@@ -75,7 +75,7 @@ if __name__ == '__main__':
             listcount.append(count)
         def four_less_decomp() -> tuple:
             '''
-            :return: tuple
+            :return: str, int
             '''
             listnum.append(i)
             listcount.append(count)
@@ -98,8 +98,8 @@ if __name__ == '__main__':
 
     def sequencer(ziptuple) -> str:
         '''
-        Take output tuple from num_decomp function, extract elements and compare with dictionary values.
-        :param: ziptuple (tuple) : Tuple with input number decomposed.
+        Take output list from num_decomp function, extract elements and compare with dictionary values.
+        :param: ziptuple (list) : List of tuples with input number decomposed.
         :return: sequence (str) : Roman numeral sequence.
         '''
         listletter: list = []
