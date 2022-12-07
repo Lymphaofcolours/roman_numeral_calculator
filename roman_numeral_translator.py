@@ -3,6 +3,9 @@ if __name__ == '__main__':
 
 
     def input_number():
+        '''
+        :return: str: Input number from user. Detect invalid inputs and ask for number again.
+        '''
         input_x: int = input('Input Your Number [<= 10e6]:')
         try:
             input_x = int(input_x)
@@ -34,7 +37,7 @@ if __name__ == '__main__':
 
     def num_decomp(count: int = 1) -> list:
         '''
-        Decomposes each number in multiples of 10 starting with units and returns it as an inverted tuple.
+        Decompose each number in multiples of 10 starting with units and return it as an inverted tuple.
             :param: count: int
             :return: list(tuple(str, int)
         '''
@@ -95,11 +98,11 @@ if __name__ == '__main__':
 
     def sequencer(ziptuple) -> str:
         '''
+        Take output tuple from num_decomp function, extract elements and compare with dictionary values.
         :param: ziptuple (tuple) : Tuple with input number decomposed.
         :return: sequence (str) : Roman numeral sequence.
         '''
         listletter: list = []
-        # Takes output tuple from num_decomp function and extracts the elements
         for i in ziptuple:
             # Searches for the count times first element(eg.5*100=500) and looks for its value in reference_dict.
             if i[0] == '5':
@@ -107,8 +110,8 @@ if __name__ == '__main__':
             # Writes [count] as many times as the first element value (eg: '3', 100 -> 100,100,100) and looks for their values in reference_dict.
             else:
                 listletter.append(reference_dict.get(str(i[1])) * int(i[0]))
-        letterseq = [''.join(listletter)]
-        print(letterseq[0])
+        letterseq = ''.join(listletter)
+        print(letterseq)
 
 
     sequencer(num_decomp())
