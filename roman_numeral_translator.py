@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
     def num_decomp(count: int = 1) -> list:
         '''
-        Decompose each number in multiples of 10 starting with units and return it as an inverted tuple.
+        Decompose each number in multiples of 10 starting with units and return it as an inverted list of tuples.
             :param: count: int
             :return: list(tuple(str, int)
         '''
@@ -93,7 +93,7 @@ if __name__ == '__main__':
             count *= 10
         # I chose a tuple because dictionaries don´t accept two entries with the same key
         ziptuple = zip(listnum, listcount)
-        # Returns inverted tuple
+        # Returns inverted list of tuples
         return list(ziptuple)[::-1]
 
     def sequencer(ziptuple) -> str:
